@@ -44,7 +44,7 @@ int Num3()
 	{
 		result = x ^ 2;
 	}
-	else if(x > 0)
+	else if (x > 0)
 	{
 		result = x * -1;
 	}
@@ -129,7 +129,7 @@ void Num6()
 	}
 }
 
-int main()
+int mainl1()
 {
 	setlocale(LC_ALL, "ru");
 	cout << "Обозреватель 1 лабы Ч.М" << endl;
@@ -165,10 +165,10 @@ int main()
 			cout << endl;
 			break;
 		default:
-			cout << "Не верный номер задания (от 1 до 6)"<< endl;
+			cout << "Не верный номер задания (от 1 до 6)" << endl;
 			break;
 		}
-		
+
 		cout << "повторить тест ?" << endl << "1 - да 2 - нет:";
 		cin >> y;
 
@@ -182,7 +182,7 @@ int main()
 		}
 		else
 		{
-			cout << "неверное число, тест остановлен" << endl; 
+			cout << "неверное число, тест остановлен" << endl;
 			test = false;
 		}
 
