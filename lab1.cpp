@@ -67,7 +67,7 @@ int Num4()
 			cout << "введите число (отрицательные не учитываються):";
 			cin >> x;
 
-		} while (x > 0);
+		} while (x < 0);
 		result += x;
 	}
 
@@ -91,13 +91,42 @@ int Num5()
 	return result;
 }
 
-double Num6(double x, double a)
+void Num6()
 {
-	double result;
+	double x, y, result;
+	for (int i = 0; i < 3; i++)
+	{
+		if (i == 0)
+		{
+			x = 1;
+		}
+		else if (i == 1)
+		{
+			x = 5;
+		}
+		else
+		{
+			x = 0.2;
+		}
 
-	result = (x * x + a) / (x + a);
-
-	return result;
+		for (int a = 0; a < 3; a++)
+		{
+			if (a == 0)
+			{
+				y = 1.5;
+			}
+			else if (a == 1)
+			{
+				y = 10;
+			}
+			else
+			{
+				y = 0.5;
+			}
+			result = (x + x) * (x + y);
+			cout << result << endl;
+		}
+	}
 }
 
 int main()
@@ -132,42 +161,11 @@ int main()
 			break;
 		case 6:
 			cout << "ваш результат :" << endl;
-			for (int i = 0; i < 3; i++)
-			{
-				double x, y;
-
-				if (i == 0)
-				{
-					x = 1;
-				}
-				else if (i == 1)
-				{
-					x = 5;
-				}
-				else
-				{
-					x = 0.2;
-				}
-
-				for (int a = 0; a < 3; a++)
-				{
-					if (a == 0)
-					{
-						y = 1.5;
-					}
-					else if (a == 1)
-					{
-						y = 10;
-					}
-					else
-					{
-						y = 0.5;
-					}
-
-					cout << Num6(x, y) << endl;
-				}
-			}
+			Num6();
 			cout << endl;
+			break;
+		default:
+			cout << "Не верный номер задания (от 1 до 6)"<< endl;
 			break;
 		}
 		
